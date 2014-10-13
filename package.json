@@ -1,0 +1,8 @@
+{
+  "name": "jobs.zooniverse.org",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "haw": "^0.5.0"
+  }
+}
