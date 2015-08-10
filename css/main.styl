@@ -1,6 +1,7 @@
 body
   font: 14px Montserrat, sans-serif
-  margin: 0
+  margin: 0 auto
+  max-width: 800px
   min-height: 100vh
 
 a
@@ -8,18 +9,17 @@ a
 
 .columns-container
   display: flex
-  flex-direction: row
   flex-wrap: wrap
 
 .column
-  flex: 1 1 24em
+  flex: 1 1 100%
 
 .content-container
-  padding: 0 2.5vw 0 5vw
+  padding: 0 2rem
 
 .introduction
   color: gray
-  font: 1.3em Georgia, serif
+  font: 1.3em/1.4em Georgia, serif
   margin-left: 2.5vw
 
 .layout-container
@@ -30,10 +30,11 @@ a
     padding-top: 1.5em
     border-bottom: 1px solid rgba(gray, 0.3)
     font-size: 1.3em
+    line-height: 1.5em
 
   > .main
     flex: 1
-    margin: 1.3em 0
+    margin: 1.3em auto
 
   > footer
     border-top: 1px solid rgba(gray, 0.3)
@@ -79,4 +80,5 @@ a
 
 .job-description
   font-size: small
+  line-height: 1.5em
   margin-left: 2.5vw
