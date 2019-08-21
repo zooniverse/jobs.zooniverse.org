@@ -2,8 +2,8 @@
 Zooniverse jobs static site
 
 # Test locally
-+ Setup node using nvm (last good: node v4.2.6, npm v2.14.12)
-+ Run a local web server (http://localhost:10850) - `npm start`
++ Setup node using nvm (last good: node v6.10.2, npm v3.10.10)
++ Run a local web server (http://localhost:1085) - `npm start`
 
 # Deployment
 
