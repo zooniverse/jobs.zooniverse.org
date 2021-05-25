@@ -8,6 +8,6 @@
   },
   "scripts": {
     "start": "haw serve --port 1085",
-    "build": "haw build"
+    "build": "haw build --config ./haw-build-config.json"
   }
 }

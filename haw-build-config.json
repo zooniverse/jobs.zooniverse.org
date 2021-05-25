@@ -1,0 +1,6 @@
+{
+  "generate": {
+    "/index.html": "public/index.{html,eco}",
+    "/main.css": "css/main.{css,styl}"
+  }
+}
