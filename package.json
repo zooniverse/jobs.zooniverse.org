@@ -8,7 +8,6 @@
   },
   "scripts": {
     "start": "haw serve --port 1085",
-    "deploy": "haw build && publisssh ./build zooniverse-static/jobs.zooniverse.org && rm -rf ./build",
-    "stage": "haw build && publisssh ./build zooniverse-static/preview.zooniverse.org/jobs && rm -rf ./build"
+    "build": "haw build --config ./haw-build-config.json"
   }
 }
