@@ -1,10 +1,10 @@
 name: Deploy jobs.zooniverse.org Staging
 
 on:
-    # Run this workflow on creation (or sync to source branch) of a new pull request
-    push:
-        branches:
-          - master
+  # Run this workflow on creation (or sync to source branch) of a new pull request
+  push:
+    branches:
+      - master
 
 jobs:
   build:
