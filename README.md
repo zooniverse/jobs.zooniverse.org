@@ -2,8 +2,9 @@
 Zooniverse jobs static site
 
 # Test locally
-+ Setup node using nvm (last good: node v14.5.5, npm v6.14.11) - `npm install`
-+ Run a local web server (http://localhost:1085) - `npm start`
++ Setup node using nvm (last good: Node 16, npm 8) - `npm ci`.
++ Run a local web server (http://localhost:3000) - `npm start`.
++ Edit the page HTML and CSS in the `build` directory.
 
 # Deployment
 
@@ -11,7 +12,7 @@ Deployment is handled by Github Action. Both staging and production deployment c
 
 ## Staging
 
-On merge to master, a Github Action is triggered to deploy to staging found at `https://preview.zooniverse.org/jobs/`.
+On merge to master, a Github Action is triggered to deploy to staging found at `https://jobs.preview.zooniverse.org`.
 
 ## Production
 
