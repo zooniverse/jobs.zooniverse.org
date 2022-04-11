@@ -2,12 +2,10 @@
   "name": "jobs.zooniverse.org",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "haw": "~0.5.0",
-    "publisssh": "~1.0.0"
-  },
   "scripts": {
-    "start": "haw serve --port 1085",
-    "build": "haw build --config ./haw-build-config.json"
+    "start": "npx serve ./build"
+  },
+  "devDependencies": {
+    "serve": "^13.0.2"
   }
 }

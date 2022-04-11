@@ -6,19 +6,25 @@ on:
     branches:
       - master
 
+  # Allow running this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
-  build:
-    name: Build staging
-    uses: zooniverse/ci-cd/.github/workflows/npm_build.yaml@main
-    with:
-      commit_id: ${{ github.sha }}
-      node_version: '16.x'
-      output: 'build'
-      script: 'build'
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Write commit_id.txt
+        run: echo ${{ github.sha }} > ./build/commit_id.txt
+      - name: Upload files
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'build'
+          path: ./build
   deploy_staging:
     name: Deploy staging
     uses: zooniverse/ci-cd/.github/workflows/deploy_static.yaml@main
-    needs: build
+    needs: upload
     with:
       source: 'build'
       target: 'preview.zooniverse.org/jobs'
@@ -31,7 +37,7 @@ jobs:
     if: always()
     with:
       commit_id: ${{ github.sha }}
-      job_name: Build staging / build
+      job_name: upload
       status: ${{ needs.deploy_staging.result }}
       title: 'Deploy jobs.zooniverse.org Staging complete'
       title_link: 'https://jobs.preview.zooniverse.org'
